@@ -1,7 +1,5 @@
-/target
+
 **/*.rs.bk
-
-
 
 # Created by https://www.gitignore.io/api/rust
 # Edit at https://www.gitignore.io/?templates=rust
@@ -20,5 +18,4 @@ Cargo.lock
 
 # End of https://www.gitignore.io/api/rust
 
-!target/
-target/*
+/**/target/**/*

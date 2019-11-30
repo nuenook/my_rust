@@ -16,6 +16,9 @@ impl Day {
     }   
 }
 
+// CLI
+use std::process::Command;
+
 fn main() {
 
     // Option enum
@@ -60,6 +63,26 @@ fn main() {
     let d2 = Day::Saturday;
     println!("Is d a weekday? {}", dday.is_weekday());
     println!("Is d2 a weekday? {}", d2.is_weekday());
+
+
+    //CLI
+    let mut cmd = Command::new("ls");
+    cmd.arg("-la");
+
+    // Execute the command
+    match cmd.output() {
+        Ok(o) => {
+
+            unsafe {
+                // convert byte to string
+                println!("Output CLI: {}", String::from_utf8_unchecked(o.stdout));
+            }
+            
+        },
+        Err(e) => {
+            println!("error cli: {}", e);
+        }
+    }
 }
 
 // Option Enum

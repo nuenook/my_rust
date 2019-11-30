@@ -1,5 +1,5 @@
 [package]
-name = "http_enum"
+name = "http_enum_cli"
 version = "0.1.0"
 authors = ["nuenook <nook.ittipon@gmail.com>"]
 edition = "2018"
